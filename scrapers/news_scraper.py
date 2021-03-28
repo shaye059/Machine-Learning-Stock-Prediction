@@ -6,8 +6,9 @@ news_key = os.environ['NEWS_API_KEY']
 
 newsapi = NewsApiClient(api_key=news_key) #Your Key Here
 
-articles = pd.read_csv('News_Articles.csv')
-print('%d rows in dataframe to start.' % articles.shape[0])
+articles = pd.read_csv('../News_Articles.csv')
+old_len = articles.shape[0]
+print('%d rows in dataframe to start.' % old_len)
 
 list_of_articles = []
 dict_of_companies = {'Microsoft': 'MSFT','Apple':'AAPL','Amazon':'AMZN',
@@ -51,4 +52,7 @@ scraped = pd.DataFrame(list_of_articles)
 print('Adding %d unseen articles to dataset.' % scraped.shape[0])
 articles = articles.append(scraped)
 articles = articles.drop_duplicates(ignore_index=True)
+articles = articles.dropna(subset=['publishedAt'])
+number_added = articles.shape[0] - old_len
+print('Added %d unseen articles to the dataset.' % number_added)
 articles.to_csv('News_Articles.csv', encoding='utf-8', index=False)

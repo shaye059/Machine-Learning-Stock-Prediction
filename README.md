@@ -3,9 +3,9 @@ This project was started August 3rd, 2020 and is currently under development. Th
 
 The most up to date dataset is available from here: [News_Articles.csv](https://drive.google.com/file/d/1kM8u5sf7a3pbdoD27s-9VuGmCMi9eKKJ/view?usp=sharing)
 
-To run the scraper you'll need the following libraries:
+To run the scraping you'll need the following libraries:
 ```
-pip install pandas newsapi-python 
+pip install pandas newsapi-python yfinance
 ```
 You'll also need to sign up for an [API key](https://newsapi.org/s/google-news-api) and set it as an environment 
 variable named NEWS_API_KEY.
