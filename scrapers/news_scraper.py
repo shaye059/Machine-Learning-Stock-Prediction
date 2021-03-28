@@ -52,7 +52,8 @@ scraped = pd.DataFrame(list_of_articles)
 print('Adding %d unseen articles to dataset.' % scraped.shape[0])
 articles = articles.append(scraped)
 articles = articles.drop_duplicates(ignore_index=True)
-articles = articles.dropna(subset=['publishedAt'])
+articles['publishedAt'] = pd.to_datetime(articles['publishedAt'])
+articles = articles[pd.notnull(articles['publishedAt'])]
 number_added = articles.shape[0] - old_len
 print('Added %d unseen articles to the dataset.' % number_added)
 articles.to_csv('News_Articles.csv', encoding='utf-8', index=False)
