@@ -1,5 +1,5 @@
 # Machine-Learning-Stock-Prediction
-This project was started August 3rd, 2020 and is currently under development. The goal is to use Natural Language Processing and Machine Learning to predict the effect of news stories on market prices for stocks.
+The goal of this project is to use Natural Language Processing and Machine Learning to predict the effects of news stories on company stock prices.
 
 The most up to date dataset is available from here: [News_Articles.csv](https://drive.google.com/file/d/1kM8u5sf7a3pbdoD27s-9VuGmCMi9eKKJ/view?usp=sharing)
 
