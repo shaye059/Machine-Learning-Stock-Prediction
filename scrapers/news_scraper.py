@@ -2,9 +2,10 @@ from newsapi.newsapi_client import NewsApiClient
 import pandas as pd
 import os
 
+# Set API key as environment variable NEWS_API_KEY before running
 news_key = os.environ['NEWS_API_KEY']
 
-newsapi = NewsApiClient(api_key=news_key) #Your Key Here
+newsapi = NewsApiClient(api_key=news_key)
 
 articles = pd.read_csv('../News_Articles.csv')
 old_len = articles.shape[0]
@@ -56,4 +57,4 @@ articles['publishedAt'] = pd.to_datetime(articles['publishedAt'])
 articles = articles[pd.notnull(articles['publishedAt'])]
 number_added = articles.shape[0] - old_len
 print('Added %d unseen articles to the dataset.' % number_added)
-articles.to_csv('News_Articles.csv', encoding='utf-8', index=False)
+articles.to_csv('../News_Articles.csv', encoding='utf-8', index=False)
