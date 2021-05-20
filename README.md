@@ -1,7 +1,7 @@
 # Machine-Learning-Stock-Prediction
 The goal of this project is to use Natural Language Processing and Machine Learning to predict the effects of news stories on company stock prices.
 
-The most up to date dataset is available from here: [Processed_Articles.csv](https://drive.google.com/file/d/16QEyw-RJN8C_0mR0M_MBJgX9fuZkOSc5/view?usp=sharing){:target="_blank"}
+The most up to date dataset is available from here: [Processed_Articles.csv](https://drive.google.com/file/d/16QEyw-RJN8C_0mR0M_MBJgX9fuZkOSc5/view?usp=sharing)
 
 To run the scraping you'll need the following libraries:
 ```
