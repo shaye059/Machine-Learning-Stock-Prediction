@@ -46,11 +46,11 @@ for company,ticker in dict_of_companies.items():
         article['company'] = company
         article['ticker'] = ticker
         article['source'] = str(article['source'])
+        article['stock_processed'] = False
         list_of_articles.append(article)
 
 
 scraped = pd.DataFrame(list_of_articles)
-print('Adding %d unseen articles to dataset.' % scraped.shape[0])
 articles = articles.append(scraped)
 articles = articles.drop_duplicates(ignore_index=True)
 articles['publishedAt'] = pd.to_datetime(articles['publishedAt'])
