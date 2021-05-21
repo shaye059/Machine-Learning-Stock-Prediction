@@ -125,12 +125,3 @@ if __name__ == '__main__':
         processed_articles.to_csv('../Processed_Articles.csv', index=False)
         articles = articles.drop(ticker_articles.index)
         articles.to_csv('../News_Articles.csv', encoding='utf-8', index=False)
-
-
-
-    # # TODO: Only feed the articles that don't have stock prices yet into this, otherwise it's slow
-    # print("Ticker data retrieved, finding daily prices and calculating deltas.")
-    # # articles = articles.head(50)
-    # articles['delta'], articles['delta_p'] = zip(*articles.apply(price_getter, ticker_data=tickerData, axis=1))
-    #
-    # articles.to_csv('tester.csv')
