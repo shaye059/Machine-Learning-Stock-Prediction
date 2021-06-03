@@ -11,4 +11,7 @@ You'll also need to sign up for an [API key](https://newsapi.org/s/google-news-a
 variable named NEWS_API_KEY.
 
 To view the current notebook you can open it in Colab [here](https://colab.research.google.com/github/shaye059/Machine-Learning-Stock-Prediction/blob/master/Stock_Prediction.ipynb)
-. The notebook is currently undergoing some heavy editing so it's probably not runnable at this time.
+. This started out as just a small little Notebook experiment but seeing as the developer edition of the news API is
+limited to pulling the last 30 days I realized that to build a usable dataset I'd have to set up routine scrapers. The
+notebook itself is currently being broken down into modularized scripts and therefore is probably not runnable if you
+want to use the already scraped and processed data provided in the CSV. 

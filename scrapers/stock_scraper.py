@@ -4,6 +4,9 @@ import yfinance as yf
 import numpy as np
 from datetime import date, timedelta
 
+# Remove if modifying, this is just to suppress the copy warning for the first line in the main for loop
+pd.options.mode.chained_assignment = None  # default='warn'
+
 
 def get_stock_time(published):
     published_date = published[0:10]
